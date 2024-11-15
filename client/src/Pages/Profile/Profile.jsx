@@ -9,6 +9,13 @@ const Profile = () => {
     const auth = useSelector((store) => store.auth);
     const navigate = useNavigate();
 
+    // navigate to auth if not logged in
+    useEffect(()=>{
+        if(auth.status != true && auth.data == null){
+            return navigate("/auth");
+        }
+    },[auth])
+
     // title change
     useEffect(() => {
         document.title = 'Profile'
