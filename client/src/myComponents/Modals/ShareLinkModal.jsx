@@ -33,12 +33,12 @@ const ShareLinkModal = ({ onClose, open, file }) => {
                                     <p>
                                         <span className="font-bold">Shorten Url - </span>
                                         <a
-                                            href={`http://localhost:5173/u/${file.shorten_url}`}
+                                            href={`https://cloudzilla-file-storage.netlify.app/u/${file.shorten_url}`}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="text-blue-600 underline break-all"
                                         >
-                                            {file ? `http://localhost:5173/u/${file.shorten_url}` : "No Url"}
+                                            {file ? `https://cloudzilla-file-storage.netlify.app/u/${file.shorten_url}` : "No Url"}
                                         </a>
                                     </p>
                                 </div>
@@ -48,7 +48,7 @@ const ShareLinkModal = ({ onClose, open, file }) => {
                                 <Button color="danger" variant="light" onPress={onClose}>
                                     Close
                                 </Button>
-                                <Button color="primary" onClick={() => window.open(`http://localhost:5173/u/${file.shorten_url}`, "_blank", "noopener,noreferrer")}>
+                                <Button color="primary" onClick={() => window.open(`https://cloudzilla-file-storage.netlify.app/u/${file.shorten_url}`, "_blank", "noopener,noreferrer")}>
                                     Visit
                                 </Button>
                             </ModalFooter>

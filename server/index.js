@@ -11,10 +11,11 @@ import filesRouter from './routers/filesRouter.js'
 
 const app = express()
 const corsOptions = {
-    origin: "http://localhost:5173",
+    origin: "https://cloudzilla-file-storage.netlify.app",
     optionsSuccessStatus: 200,
     credentials: true
 }
+
 app.use(cors(corsOptions));
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -22,12 +23,11 @@ app.use(cookieParser())
 
 
 app.listen(process.env.PORT, async () => {
-    console.log("Server Started at => http://localhost:" + process.env.PORT);
+    console.log("Server Started at => https://cloudzilla-file-storage.onrender.com");
     try {
         await mongoose.connect(process.env.MONGO_URL);
         console.log("MONGO_DB connected.")
     } catch (error) {
-        console.log("ERROR WHILE CONNECTING TO MONGO_DB\n", error);
         process.exit(1);
         return;
     }

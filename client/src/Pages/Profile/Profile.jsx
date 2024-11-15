@@ -98,8 +98,8 @@ const Profile = () => {
                                     </a>
                                 </TableCell>
                                 <TableCell>
-                                    <a href={`http://localhost:5173/u/${file.shorten_url}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
-                                        {`http://localhost:5173/u/${file.shorten_url}`}
+                                    <a href={`https://cloudzilla-file-storage.netlify.app/u/${file.shorten_url}`} target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
+                                        {`https://cloudzilla-file-storage.netlify.app/u/${file.shorten_url}`}
                                     </a>
                                 </TableCell>
                                 <TableCell className='flex justify-center items-center'>
