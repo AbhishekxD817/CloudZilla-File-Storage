@@ -16,7 +16,7 @@ const App = () => {
       </main>
       <Footer />
       <ToastContainer
-        position="bottom-right"
+        position="top-right"
         draggable
         theme="dark" />
     </>
